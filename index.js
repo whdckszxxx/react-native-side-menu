@@ -7,6 +7,7 @@ import {
   Dimensions,
   Animated,
   TouchableWithoutFeedback,
+  SafeAreaView
 } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from './styles';
@@ -245,13 +246,13 @@ export default class SideMenu extends React.Component {
     );
 
     return (
-      <View
+      <SafeAreaView
         style={styles.container}
         onLayout={this.onLayoutChange}
       >
         {menu}
         {this.getContentView()}
-      </View>
+      </SafeAreaView>
     );
   }
 }
